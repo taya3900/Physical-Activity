@@ -1,0 +1,247 @@
+/* רקע כללי לדף *//* ===== בסיס הדף ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+}
+
+/* ===== כותרות H1 ===== */
+h1 {
+    text-align: center;
+    padding: 20px 40px;
+    margin: 40px auto;
+    width: fit-content;
+
+    border: 3px solid #00e6b8;
+    border-radius: 12px;
+
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: turquoise;
+    text-shadow: 0 0 12px rgba(0, 255, 213, 0.7);
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+
+    animation: glowTitle 3s infinite ease-in-out;
+}
+
+/* אנימציית זוהר לכותרות */
+@keyframes glowTitle {
+    0% { text-shadow: 0 0 10px #00ffd5; }
+    50% { text-shadow: 0 0 30px #00ffd5; }
+    100% { text-shadow: 0 0 10px #00ffd5; }
+}
+
+/* ===== כותרות H2 ===== */
+h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    padding: 12px 25px;
+    width: fit-content;
+    margin: 40px auto;
+
+    border: 2px solid #00ffd5;
+    border-radius: 10px;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(4px);
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+h2:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 35px rgba(0,255,213,0.7);
+}
+
+/* ===== כותרות H3 ===== */
+h3 {
+    font-size: 1.9rem;
+    color: white;
+
+    padding-left: 14px;
+    margin: 25px auto;
+    width: fit-content;
+
+    border-left: 4px solid #00e6b8;
+    letter-spacing: 1px;
+}
+
+/* ===== פסקאות ===== */
+p {
+    font-size: 1.9rem;
+    line-height: 1.1;
+    color: #e8ffff;
+    max-width: 900px;
+    margin: 15px auto;
+    text-align: center;
+
+    text-shadow: 0 0 4px rgba(0, 255, 213, 0.25);
+}
+
+p strong, p b {
+    color: #00ffd5;
+    font-weight: 800;
+    letter-spacing: 0.9px;
+    text-shadow: 0 0 8px rgba(0, 255, 213, 0.6);
+}
+
+/* ===== רשימות ===== */
+ul li {
+    font-size: 1.15rem;
+    color: #ffffff;
+    margin: 12px 0;
+    padding: 8px 14px;
+    list-style: none;
+
+    border-left: 3px solid #00e6b8;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(3px);
+
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+ul li:hover {
+    transform: translateX(6px);
+    border-color: #00ffd5;
+}
+
+/* ===== תמונות ===== */
+img {
+    height: auto;
+    max-width: 900px;
+    margin: 40px auto;
+    display: block;
+
+    border-radius: 18px;
+    border: 3px solid #00e6b8;
+    box-shadow: 0 0 20px rgba(0, 255, 213, 0.4);
+
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 35px rgba(0, 255, 213, 0.7);
+}
+
+/* ===== סרטונים ===== */
+iframe {
+    border: 3px solid #00ffd5;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,255,213,0.4);
+    transition: 0.3s;
+}
+
+iframe:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 40px rgba(0,255,213,0.8);
+}
+
+video-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* ===== אפקט גלילה ===== */
+reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+reveal active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== פס אנרגיה ===== */
+energy-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #00ffd5, #00e6b8);
+    box-shadow: 0 0 12px #00ffd5;
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.1s linear;
+}
+.site-footer {
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+
+    padding: 30px;
+    text-align: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    border-top: 3px solid #00e6b8;
+    border-radius: 12px 12px 0 0;
+
+    color: #b8fff2;
+    text-shadow: 0 0 10px rgba(0, 255, 213, 0.45);
+
+    box-shadow: 0 0 18px rgba(0, 255, 213, 0.25);
+}
+
+/* כותרות בתוך הפוטר */
+.site-footer h3 {
+    color: turquoise;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 12px rgba(0, 255, 213, 0.6);
+}
+
+/* טקסט וקישורים */
+.site-footer p,
+.site-footer li {
+    color: #d9fff8;
+    margin: 6px 0;
+    text-shadow: 0 0 6px rgba(0, 255, 213, 0.35);
+}
+
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer a {
+    color: #7fffe6;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    text-shadow: 0 0 8px rgba(0, 255, 213, 0.5);
+}
+
+.site-footer a:hover {
+    color: white;
+    text-shadow: 0 0 14px rgba(0, 255, 213, 0.9);
+}
+
+/* זכויות יוצרים */
+.site-footer .rights {
+    margin-top: 20px;
+    border-top: 1px solid rgba(0, 255, 213, 0.4);
+    padding-top: 10px;
+    font-size: 0.9rem;
+}
+
+
+
+
+
+
